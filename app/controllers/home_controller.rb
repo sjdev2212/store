@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
-  def index
-
+  def home
+    @items = Item.all
+    
+   
   end
 end

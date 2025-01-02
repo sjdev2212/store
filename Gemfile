@@ -9,7 +9,6 @@ gem 'rails', '~> 7.0.5', '>= 7.0.5.1'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
@@ -66,7 +65,7 @@ group :development do
 end
 
 group :development do
-  gem "hotwire-livereload"
+  gem 'hotwire-livereload'
 end
 
 group :test do

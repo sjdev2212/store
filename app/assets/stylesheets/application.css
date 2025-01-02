@@ -8,9 +8,34 @@ body{
 .navbar{
     background-color:#1b0534;
     color: #fff;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
 }
+
+.slider{
+ 
+  height: 22em;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns:3% 94% 3%;
+  padding: .2em;
+  
+  
+}
+.shower{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.mobile_image{
+  width: 8em;
+  height: 8em;
+}
+.slide-item{
+  display: flex;
+}
+

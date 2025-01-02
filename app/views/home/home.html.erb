@@ -3,13 +3,54 @@
         sal fina
     </p>
 
-    <input type="text" placeholder="search">    
+    <input type="text" placeholder="search">
     <button>search</button>
 
-    <ul>
-        <li><%=  link_to 'home', '/home' %></li>
-        <li><%=  link_to 'about', '/about' %></li>
-        <li><%=  link_to 'contact', '/contact' %></li>
-    </nav> 
 
-  <%=  link_to 'index', '/products'%>
+</nav>
+
+<section class='slider' data-controller="slideshow" data-slideshow-index-value="0">
+    <div>
+        <button data-action="slideshow#previous"> ← </button>
+    </div>
+    <div class='shower'>
+        <div data-slideshow-target="slide">
+            <p>Mobile</p>
+            <%= image_tag "mobile.jpg", class:'mobile_image' %>
+        </div>
+        <div data-slideshow-target="slide">
+            <p>TV</p>
+            <%= image_tag "tvs.webp", class:'mobile_image' %>
+        </div>
+
+        <div data-slideshow-target="slide">
+            <p>
+                Gaming
+            </p>
+            <%= image_tag "gaming.jpg", class:'mobile_image' %>
+        </div>
+
+        <div data-slideshow-target="slide">
+            <p>
+                Notebooks
+            </p>
+            <%= image_tag "notebooks.webp", class:'mobile_image' %>
+        </div>
+
+    </div>
+
+    <div>
+        <button data-action="slideshow#next"> → </button>
+    </div>
+</section>
+
+
+<% @items.each do |item|%>
+<div>
+    <h2><%= item.name %></h2>
+    <p><%= item.description %></p>
+    <p><%= item.category %></p>
+    <p><%= item.stock %></p>
+
+</div>
+<% end %>
