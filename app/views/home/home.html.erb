@@ -1,48 +1,52 @@
-<nav class="navbar">
-    <p>
-        sal fina
-    </p>
-
-    <input type="text" placeholder="search">
-    <button>search</button>
-
-
-</nav>
-
 <section class='slider' data-controller="slideshow" data-slideshow-index-value="0">
-    <div>
-        <button data-action="slideshow#previous"> ← </button>
+    <div class='slider-buttons'>
+        <button class='btn' data-action="slideshow#previous">
+            <%= image_tag "left.svg", class:'left-svg' %>
+        </button>
     </div>
-    <div class='shower'>
+    <div class=' shower'>
         <div data-slideshow-target="slide">
-            <p>Mobile</p>
-            <%= image_tag "mobile.jpg", class:'mobile_image' %>
+            <div class='slide-card'>
+                <p class='slide-card-text'>
+                    Mobile
+                </p>
+                <%= image_tag "cell.png", class:'mobile_image' %>
+            </div>
         </div>
         <div data-slideshow-target="slide">
-            <p>TV</p>
-            <%= image_tag "tvs.webp", class:'mobile_image' %>
+            <div class='slide-card'>
+                <p class='slide-card-text'>
+                    TV</p>
+                <%= image_tag "tvs.webp", class:'mobile_image' %>
+            </div>
         </div>
 
         <div data-slideshow-target="slide">
-            <p>
-                Gaming
-            </p>
-            <%= image_tag "gaming.jpg", class:'mobile_image' %>
+            <div class='slide-card'>
+                <p class='slide-card-text'>
+                    Gaming
+                </p>
+                <%= image_tag "gaming.jpg", class:'mobile_image' %>
+            </div>
         </div>
 
         <div data-slideshow-target="slide">
-            <p>
-                Notebooks
-            </p>
-            <%= image_tag "notebooks.webp", class:'mobile_image' %>
+            <div class='slide-card'>
+                <p class='slide-card-text'>
+                    <%= link_to "Notebooks", items_path %> </p>
+                <%= image_tag "notebook.png", class:'mobile_image' %>
+            </div>
         </div>
 
     </div>
 
-    <div>
-        <button data-action="slideshow#next"> → </button>
+    <div class='slider-buttons'>
+        <button class='btn' data-action="slideshow#next">
+            <%= image_tag "right.svg", class:'left-svg' %>
+        </button>
     </div>
 </section>
+
 
 
 <% @items.each do |item|%>

@@ -15,15 +15,36 @@ body{
 }
 
 .slider{
- 
   height: 22em;
   width: 100%;
-
   display: grid;
-  grid-template-columns:3% 94% 3%;
+  grid-template-columns:3.5% 93% 3.5%;
   padding: .2em;
-  
-  
+  }
+  .slider-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+.btn{
+  border: none;
+}
+.left-svg{
+  width: 3em;
+  height: 3em;
+
+}
+
+.left-svg:hover{
+scale: 1.1;
+transition: 0.5s ;
+}
+.left-svg:active {
+  transform: scale(0.7);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
 .shower{
 display: flex;
@@ -32,10 +53,33 @@ justify-content: center;
 align-items: center;
 }
 .mobile_image{
-  width: 8em;
-  height: 8em;
+  width: 12em;
+  height: 12em;
 }
-.slide-item{
+.slide-card{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: #f0f0f0;
+  border: 2px solid #1b0534;
+  flex-direction: column;
+  width: 20em;
+}
+.slide-card:hover{
+  background-color: #1b0534;
+  color: #fff;
+  transform: scale(1.1);
+  transition: 0.5s ;
 }
 
+.slide-card-text{
+  font-size: 1.5em;
+  font-weight: bold;
+
+  animation: pulse; /* referring directly to the animation's @keyframe declaration */
+  animation-duration:  2s; /* how long the animation will take */
+
+}

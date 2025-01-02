@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Store</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <%= javascript_importmap_tags %>
-  </head>
+</head>
 
-  <body>
+<body>
+    <nav class="navbar">
+        <p>
+            sal fina
+        </p>
+
+        <input type="text" placeholder="search">
+        <button>search</button>
+
+
+    </nav>
     <%= yield %>
 
 
-  </body>
+</body>
+
 </html>
