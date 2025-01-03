@@ -6,37 +6,49 @@
     </div>
     <div class=' shower'>
         <div data-slideshow-target="slide">
+            <%= link_to 'items/Mobile', class: 'deco' do %>
             <div class='slide-card'>
                 <p class='slide-card-text'>
                     Mobile
                 </p>
                 <%= image_tag "cell.png", class:'mobile_image' %>
             </div>
-        </div>
-        <div data-slideshow-target="slide">
-            <div class='slide-card'>
-                <p class='slide-card-text'>
-                    TV</p>
-                <%= image_tag "tvs.webp", class:'mobile_image' %>
-            </div>
+            <% end %>
         </div>
 
         <div data-slideshow-target="slide">
+            <%= link_to 'items/TV' , class:'deco'  do %>
             <div class='slide-card'>
                 <p class='slide-card-text'>
-                    Gaming
+                    TV
                 </p>
-                <%= image_tag "gaming.jpg", class:'mobile_image' %>
+                <%= image_tag "tv.png", class:'mobile_image' %>
             </div>
+            <% end %>
         </div>
 
+
+
         <div data-slideshow-target="slide">
+            <%= link_to 'items/Notebooks' ,class:'deco' do  %>
             <div class='slide-card'>
-                <p class='slide-card-text'>
-                    <%= link_to "Notebooks", items_path %> </p>
-                <%= image_tag "notebook.png", class:'mobile_image' %>
+                <p class="slide-card-text">Notebooks</p>
+                <%= image_tag "notebook.png", class: 'mobile_image' %>
             </div>
+            <% end %>
         </div>
+
+
+        <div data-slideshow-target="slide">
+            <%= link_to 'items/Gaming' ,class:'deco' do  %>
+            <div class='slide-card'>
+                <p class="slide-card-text">Gaming</p>
+                <%= image_tag "gaming.png", class: 'mobile_image' %>
+            </div>
+            <% end %>
+        </div>
+
+
 
     </div>
 

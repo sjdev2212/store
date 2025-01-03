@@ -74,11 +74,17 @@ align-items: center;
   transform: scale(1.1);
   transition: 0.5s ;
 }
+.deco{
+  text-decoration: none;
+  
+}
 
 .slide-card-text{
   font-size: 1.5em;
   font-weight: bold;
+  align-self: center;
 
+text-decoration: none;
   animation: pulse; /* referring directly to the animation's @keyframe declaration */
   animation-duration:  2s; /* how long the animation will take */
 
