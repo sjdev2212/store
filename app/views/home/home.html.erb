@@ -6,7 +6,7 @@
     </div>
     <div class=' shower'>
         <div data-slideshow-target="slide">
-            <%= link_to 'items/Mobile', class: 'deco' do %>
+            <%= link_to 'items/cat/Mobile', class: 'deco' do %>
             <div class='slide-card'>
                 <p class='slide-card-text'>
                     Mobile
@@ -17,7 +17,7 @@
         </div>
 
         <div data-slideshow-target="slide">
-            <%= link_to 'items/TV' , class:'deco'  do %>
+            <%= link_to 'items/cat/TV' , class:'deco'  do %>
             <div class='slide-card'>
                 <p class='slide-card-text'>
                     TV
@@ -30,7 +30,7 @@
 
 
         <div data-slideshow-target="slide">
-            <%= link_to 'items/Notebooks' ,class:'deco' do  %>
+            <%= link_to 'items/cat/Notebooks' , class:'deco'  do %>
             <div class='slide-card'>
                 <p class="slide-card-text">Notebooks</p>
                 <%= image_tag "notebook.png", class: 'mobile_image' %>
@@ -40,7 +40,7 @@
 
 
         <div data-slideshow-target="slide">
-            <%= link_to 'items/Gaming' ,class:'deco' do  %>
+            <%= link_to 'items/cat/Gaming' , class:'deco'  do %>
             <div class='slide-card'>
                 <p class="slide-card-text">Gaming</p>
                 <%= image_tag "gaming.png", class: 'mobile_image' %>
@@ -59,7 +59,7 @@
     </div>
 </section>
 
-
+<%= link_to 'New Item', new_item_path %>
 
 <% @items.each do |item|%>
 <div>
