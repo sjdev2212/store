@@ -1,0 +1,11 @@
+development:
+  cloud_name: 'rails_cloud"'
+  api_key: '452992363541872'
+  api_secret: 'tYkFdHHjvjwJvZPDsXEJK-vrinQ'
+  secure: true
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: "rails_cloud"
+  api_key: "452992363541872"
+  api_secret: "tYkFdHHjvjwJvZPDsXEJK-vrinQ"
