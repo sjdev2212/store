@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
   def show 
-    @items = Item.where(category: params[:category])
+    @item = Item.find(params[:id])
   end
   def filter
     @category = params[:category]
@@ -21,9 +21,28 @@ class ItemsController < ApplicationController
     else
       render :new
     end
+  end
+    def edit
+      @item = Item.find(params[:id])
+
+    end
+    def update
+      @item = Item.find(params[:id])
+      if @item.update(item_params)
+        redirect_to items_path
+      else
+        render :edit
+      end
+    end
+    def destroy
+      @item = Item.find(params[:id])
+      @item.destroy
+      redirect_to items_path  notice: "Item deleted"
+    end
+
   
     
-  end
+  
 
   private
 

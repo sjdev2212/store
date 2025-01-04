@@ -7,6 +7,11 @@
         <button>search</button>
 
       <% if user_signed_in? %>
+<% if  current_user.admin %>
+        <p>
+            <%= link_to "Admin", '/admin_panel' %>
+        </p>
+        <% end %>
         <p>
             <%= button_to "Logout", destroy_user_session_path, method: :delete %>
         </p>

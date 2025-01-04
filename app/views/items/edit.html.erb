@@ -1,0 +1,18 @@
+<h2>
+    Edit item
+</h2>
+<%= form_with model: @item, local: true do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+    <%= form.label :stock %>
+    <%= form.number_field :stock %>
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+    <%= form.submit %>
+<% end %>
