@@ -12,16 +12,9 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <p>
-            sal fina
-        </p>
-
-        <input type="text" placeholder="search">
-        <button>search</button>
-
-
-    </nav>
+<%= render "layouts/navbar" %>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     <%= yield %>
 
 

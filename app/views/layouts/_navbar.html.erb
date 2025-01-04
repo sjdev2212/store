@@ -1,0 +1,24 @@
+    <nav class="navbar">
+        <p>
+            sal fina
+        </p>
+
+        <input type="text" placeholder="search">
+        <button>search</button>
+
+      <% if user_signed_in? %>
+        <p>
+            <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+        </p>
+        <p>
+            signed in as <%= current_user.email %>
+        </p>
+        <% else %>
+        <p>
+            <%= link_to "Login", new_user_session_path %>
+        </p>
+        <p>
+            <%= link_to "Sign up", new_user_registration_path %>
+        </p>
+        <% end %>
+</nav>
