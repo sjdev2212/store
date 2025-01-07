@@ -1,6 +1,6 @@
 <section class='slider' data-controller="slideshow" data-slideshow-index-value="0">
     <div class='slider-buttons'>
-        <button class='btn' data-action="slideshow#previous">
+        <button class='arrow' data-action="slideshow#previous">
             <%= image_tag "left.svg", class:'left-svg' %>
         </button>
     </div>
@@ -53,7 +53,7 @@
     </div>
 
     <div class='slider-buttons'>
-        <button class='btn' data-action="slideshow#next">
+        <button class='arrow' data-action="slideshow#next">
             <%= image_tag "right.svg", class:'left-svg' %>
         </button>
     </div>
@@ -63,10 +63,10 @@
 
 <% @items.each do |item|%>
 <div>
-    <h2><%= item.name %></h2>
-    <p><%= item.description %></p>
-    <p><%= item.category %></p>
-    <p><%= item.stock %></p>
-
+  <ul class="items-list">
+    <% @items.each do |item| %>
+      <%= render "items/item", item: item %>
+    <% end %>
+  </ul>
 </div>
 <% end %>

@@ -35,6 +35,9 @@ body{
   height: 3em;
 
 }
+.arrow{
+  border: none;
+}
 
 .left-svg:hover{
 scale: 1.1;
@@ -88,4 +91,77 @@ text-decoration: none;
   animation: pulse; /* referring directly to the animation's @keyframe declaration */
   animation-duration:  2s; /* how long the animation will take */
 
+}
+
+.turbo-progress-bar {
+  background: linear-gradient(to right, #9788a9 0%, #1b0534 50%, #e6d1d1 50%, #cfc6c6 100%); 
+  
+}
+.items-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding: 0.7em;
+  margin: 0.7em;
+}
+.item-card {
+  box-sizing: border-box;
+  height: 25em;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  width: 23em;
+}
+
+.item-card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.itemp-card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.card-btns{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.btn {
+  --bg: #1b0534;
+  --hover-bg: #ff90e8;
+  --hover-text: #000;
+  color: #fff;
+  width: 7em;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.btn:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.btn:active {
+  transform: translate(0);
+  box-shadow: none;
 }
