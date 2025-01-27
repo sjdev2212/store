@@ -1,16 +1,20 @@
 class Item < ApplicationRecord
-  has_one_attached :image
+  has_many_attached :images
+
+  validate :image_count_within_limit
 
   def as_json(options = {})
-    super(options.merge({
-                          methods: [:image_url]
-                        }))
-  end
+  super(options.merge({
+                        methods: [:image_urls]
+                      }))
+end
 
-  def image_url
-    return unless image.attached?
+def image_urls
+  images.map { |image| Cloudinary::Utils.cloudinary_url(image.key) } if images.attached?
+end
+  private
 
-    # Use the Cloudinary service URL
-    Cloudinary::Utils.cloudinary_url(image.key, secure: true)
+  def image_count_within_limit
+    errors.add(:images, "You can upload a maximum of 5 images.") if images.count > 5
   end
 end

@@ -2,3 +2,10 @@
 
  items show
 </h1>
+<%=  @item.name%>
+<%=  @item.description%>
+<%=  @item.price%>
+<%=  @item.stock%>
+
+<%= image_tag @item.images.last, class: "item-image" %>
+<%=link_to  "Back", items_path, class: "btn" %>   

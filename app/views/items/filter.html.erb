@@ -1,7 +1,36 @@
-<%@items.each do  |item|%>
+<section class="filtered-items">
+    
+<ul class="filtered-list">
 
-<p> <%= item.name %> </p>
-<% if item.image.attached? %>
-    <%= cl_image_tag item.image.key, :width=>150, :crop=>"fill" %>
-<% end %>
+        <%@items.each do  |item|%>
+
+    <li>
+        <%= link_to  item.name  , item_path(item.id)    %>
+
+    
+    <% if  item.images.attached? %>
+    <%= image_tag item.images.last, class: "item-image" %>
+    <% end %>
+
+        <% if  current_user && current_user.admin %>
+    <div class="card-btns">
+      <%= button_to "Edit", edit_item_path(item), data: { turbo_frame: dom_id(item) }, method: :get, class: 'btn' %>
+      <%= button_to "Delete", item_path(item), method: :delete, data: { turbo_confirm: "Are you sure?" }, class: 'btn' %>
+    </div>
+    <%else%>
+
+   <div class="add-cart">
+<%= button_to "Add to cart", edit_item_path(item), data: { turbo_frame: dom_id(item) }, method: :get, class: 'btn' %>
+    
+</div>
+   <%end %>
+    </li>
+
+
+    
+
 <%end%>
+    </ul>
+
+
+</section>

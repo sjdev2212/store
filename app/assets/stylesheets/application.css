@@ -104,9 +104,14 @@ text-decoration: none;
   padding: 0.7em;
   margin: 0.7em;
 }
+.card_image{
+  width: 14em;
+  height: 12em;
+  border-radius: 15px;
+}
 .item-card {
   box-sizing: border-box;
-  height: 25em;
+  height: 38em;
   background: rgba(217, 217, 217, 0.58);
   border: 1px solid white;
   box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
@@ -129,6 +134,16 @@ text-decoration: none;
   border: 1px solid black;
   transform: scale(1.05);
 }
+.content{
+  margin: 0.;
+}
+.card-title{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.description{
+font-weight: 1em;
+}
 
 .itemp-card:active {
   transform: scale(0.95) rotateZ(1.7deg);
@@ -139,6 +154,7 @@ text-decoration: none;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  margin-top: 2em;
 }
 .btn {
   --bg: #1b0534;
@@ -165,3 +181,92 @@ text-decoration: none;
   transform: translate(0);
   box-shadow: none;
 }
+
+
+.show-item{
+  display: grid;
+  grid-template-columns:  1fr 1fr;
+}
+
+.show-item-left{
+  border: 2px solid #1b0534;
+  height: 30em;
+  margin: 0;
+  padding: 0;
+}
+.item-image{
+ width: 15em;
+  height: 15em;
+border-radius: 15px;
+
+}
+
+.filtered-items {
+  display: flex;
+ margin: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  background-color: #f0f0f0;
+  border: 1px solid #1b0534;
+  flex-direction: column;
+  height: fit-content;
+  
+}
+.filtered-list{
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1em;
+}
+.filtered-list li{
+  box-sizing: border-box;
+  height: 28em;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  width: 23em;
+}
+.filtered-list li:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.add-cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 1em;
+
+  flex-direction: column;
+  width: 20em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

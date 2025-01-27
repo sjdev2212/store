@@ -1,23 +1,27 @@
 <%= turbo_frame_tag dom_id(item) do %>
+    <%= link_to item_path(item), data: { turbo_frame: "_top" }, class: "item-link" do %>
   <li class="item-card">
-   <h3> <%= item.name %>
-   </h3>
-   <p>
-    <%= item.description %>
-    </p>
-    <p>
-      $
-    <%=item.price %>
-    </p>
-    <p>
-    <%= item.stock %>
-    </p>
-    <div>
-    <%= image_tag item.image_url, width: 100 if item.image.attached? %>
-    </div>
+      <h3><%= item.name %></h3>
+      <p>$<%= item.price %></p>
+      <p>Available stock:<%= item.stock %></p>
+      <div>
+        <% if item.images.attached? %>
+          <%= image_tag item.images.first, class: "item-image " %>
+        <% end %>
+      </div>
+    <% end %>
+    <% if  current_user && current_user.admin %>
     <div class="card-btns">
-    <%= button_to "Edit", edit_item_path(item), data: { turbo_frame: dom_id(item) }, method: :get , class:'btn' %>
-    <%= button_to "Delete", item_path(item), method: :delete, data: { turbo_confirm: "Are you sure?" }, class:'btn' %>
+      <%= button_to "Edit", edit_item_path(item), data: { turbo_frame: dom_id(item) }, method: :get, class: 'btn' %>
+      <%= button_to "Delete", item_path(item), method: :delete, data: { turbo_confirm: "Are you sure?" }, class: 'btn' %>
     </div>
+    <%else%>
+
+   <div class="add-cart">
+<%= button_to "Add to cart", edit_item_path(item), data: { turbo_frame: dom_id(item) }, method: :get, class: 'btn' %>
+    
+</div>
+   <%end %>
+
   </li>
 <% end %>

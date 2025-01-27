@@ -60,13 +60,10 @@
 </section>
 
 
-
-<% @items.each do |item|%>
-<div>
+<%= turbo_frame_tag "items_list" do %>
   <ul class="items-list">
     <% @items.each do |item| %>
       <%= render "items/item", item: item %>
     <% end %>
   </ul>
-</div>
 <% end %>

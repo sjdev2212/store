@@ -25,7 +25,7 @@
 </div>
 <div>
     <%=form.label :image, style: "display: block" %>
-    <%= form.file_field :image %>
+  <%= form.file_field :images, multiple: true %>
 </div>
 
     <%= form.submit "Save" %>
